@@ -15,18 +15,24 @@ body{
 .center{
     border-radius: 15px;
     background: hsl(0, 0%, 100%);
+    padding: 20px;
     max-width: 20vw;
-    height: 65vh;
+    /* height: 65vh; Dont use height stupid as it creates a static div that's why your content was overfloeing from it. */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 img{
+    /* Below 2 line of code for responsive setup. */
+    display: block;
+    max-width: 100%; /* this will make the image grow 100% of the container size and respect its paddings */
     border-radius: 15px;
-    width: 90%;
+
+    /* width: 90%;
     height: 55%;
-    margin-top: 5%;
+    margin-top: 5%; 
+    My earlier code.*/
     
 }
 
@@ -49,8 +55,8 @@ img{
 
 @media (max-width: 375px) {
     .center{
-        width: 80%;
-        height: 60%;
+        max-width: 60%;
+        
     }
 }
 
